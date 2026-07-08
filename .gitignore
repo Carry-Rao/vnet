@@ -1,0 +1,25 @@
+# Binaries
+vnet/vnet
+vnet-server/vnet-server
+vnet-server-bin
+vnet-client
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Go
+*.test
+*.out
+go.work
+go.work.sum
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
