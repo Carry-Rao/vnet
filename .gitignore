@@ -14,6 +14,16 @@ vnet-client
 go.work
 go.work.sum
 
+# Android build
+android/app/build/
+android/build/
+android/.gradle/
+android/local.properties
+android/.idea/
+android/captures/
+android/externalNativeBuild/
+android/.cxx/
+
 # IDE
 .idea/
 .vscode/
