@@ -61,7 +61,9 @@ func readWsLoop(conn *websocket.Conn) {
 			log.Printf("[WS READ EXIT] err=%v", err)
 			return
 		}
-		_, err = tunDev.Write([][]byte{pkt}, 0)
+		buf := make([]byte, len(pkt)+12)
+		copy(buf[12:], pkt)
+		_, err = tunDev.Write([][]byte{buf}, 12)
 		if err != nil {
 			log.Printf("[TUN WRITE ERR] len=%d err=%v", len(pkt), err)
 		} else {
